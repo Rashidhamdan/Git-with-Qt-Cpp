@@ -1,4 +1,4 @@
-# GIT_GUI
+# Git GUI with Qt/C++
 
 [Main Window](docs/screenshots/main_window.png)
 
