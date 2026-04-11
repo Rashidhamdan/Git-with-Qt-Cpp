@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RepoExplorerWidget</class>
+ <widget class="QWidget" name="RepoExplorerWidget">
+  <property name="windowTitle">
+   <string>Repository Explorer</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DiffViewerWidget</class>
+ <widget class="QWidget" name="DiffViewerWidget">
+  <property name="windowTitle">
+   <string>Diff Viewer</string>
+  </property>
+  <layout class="QVBoxLayout" name="layout"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+

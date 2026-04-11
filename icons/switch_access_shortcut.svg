@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="24px"
+   viewBox="0 -960 960 960"
+   width="24px"
+   fill="#e3e3e3"
+   version="1.1"
+   id="svg642"
+   sodipodi:docname="switch_access_shortcut.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs646" />
+  <sodipodi:namedview
+     id="namedview644"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="32.708333"
+     inkscape:cx="12.015287"
+     inkscape:cy="12.030573"
+     inkscape:window-width="1854"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg642" />
+  <path
+     d="M576-131q-105-46-166.5-140.5T348-480q0-97 46.5-182T523-800H344v-28h232v232h-28v-189q-81 48-126.5 129T376-481q0 103 54 188.5T576-162v31Z"
+     id="path640" />
+  <path
+     style="fill:#4d4d4d;stroke-width:0.0305732"
+     d="M 13.941392,20.48965 C 12.010789,19.515313 10.582385,18.060542 9.6431847,16.112102 9.0528077,14.887321 8.7725192,13.722689 8.7234379,12.290446 8.6463524,10.041011 9.3803305,7.8492899 10.812107,6.0535032 c 0.515678,-0.6467831 1.334941,-1.4055143 2.024155,-1.8746 l 0.255371,-0.1738077 -2.234988,-0.00784 -2.2349889,-0.00784 V 3.6533048 3.3171975 H 11.510828 14.4 v 2.8891719 2.889172 H 14.063694 13.727389 V 6.7432057 c 0,-1.2937848 -0.01094,-2.3590945 -0.0243,-2.3673551 -0.03559,-0.021998 -0.735064,0.4542721 -1.106909,0.7536958 -0.425123,0.3423259 -1.085184,1.0252779 -1.411237,1.4601788 -1.4975517,1.9974892 -2.0874893,4.4629508 -1.6623225,6.9471648 0.2955724,1.727004 1.1177275,3.326498 2.3791665,4.628643 0.642773,0.663514 1.443694,1.257528 2.262065,1.677691 l 0.235888,0.121107 1.22e-4,0.374523 c 6.1e-5,0.205987 -0.0033,0.374522 -0.0075,0.374522 -0.0042,0 -0.207139,-0.100677 -0.450955,-0.223726 z"
+     id="path654"
+     transform="matrix(40,0,0,40,0,-960)" />
+</svg>

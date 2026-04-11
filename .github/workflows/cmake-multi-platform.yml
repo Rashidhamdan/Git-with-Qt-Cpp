@@ -1,0 +1,130 @@
+name: Build GIT_GUI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    name: Build Windows
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.6.3'
+          host: 'windows'
+          target: 'desktop'
+          arch: 'win64_msvc2019_64'
+
+      - name: Configure CMake
+        run: >
+          cmake -S . -B build
+          -G "Visual Studio 17 2022"
+          -A x64
+      - name: Build
+        run: cmake --build build --config Release
+
+      - name: Prepare Windows package directory
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path dist\GIT_GUI-windows | Out-Null
+          $exePath = ""
+          if (Test-Path "build\Release\GIT_GUI.exe") {
+            $exePath = "build\Release\GIT_GUI.exe"
+          }
+          elseif (Test-Path "build\GIT_GUI.exe") {
+            $exePath = "build\GIT_GUI.exe"
+          }
+          else {
+            Write-Error "GIT_GUI.exe was not found."
+            exit 1
+          }
+          Copy-Item $exePath dist\GIT_GUI-windows\GIT_GUI.exe
+          if (Test-Path "README.md") {
+            Copy-Item "README.md" dist\GIT_GUI-windows\
+          }
+          if (Test-Path "LICENSE") {
+            Copy-Item "LICENSE" dist\GIT_GUI-windows\
+          }
+          if (Test-Path "LICENSE.txt") {
+            Copy-Item "LICENSE.txt" dist\GIT_GUI-windows\
+          }
+      - name: Deploy Qt runtime
+        shell: pwsh
+        run: |
+          windeployqt --release --no-translations dist\GIT_GUI-windows\GIT_GUI.exe
+      - name: Create Windows zip artifact
+        shell: pwsh
+        run: |
+          Compress-Archive -Path dist\GIT_GUI-windows\* -DestinationPath dist\GIT_GUI-windows.zip -Force
+      - name: Upload Windows artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GIT_GUI-windows
+          path: dist/GIT_GUI-windows.zip
+
+  build-linux:
+    name: Build Linux
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            cmake \
+            ninja-build \
+            g++ \
+            qt6-base-dev \
+            qt6-base-dev-tools \
+            qt6-tools-dev \
+            qt6-tools-dev-tools \
+            qt6-l10n-tools \
+            libgl1-mesa-dev \
+            libxkbcommon-dev
+      - name: Configure CMake
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Prepare Linux package directory
+        run: |
+          mkdir -p dist/GIT_GUI-linux
+          if [ -f build/GIT_GUI ]; then
+            cp build/GIT_GUI dist/GIT_GUI-linux/GIT_GUI
+          else
+            echo "GIT_GUI binary was not found."
+            exit 1
+          fi
+          chmod +x dist/GIT_GUI-linux/GIT_GUI
+          if [ -f README.md ]; then
+            cp README.md dist/GIT_GUI-linux/
+          fi
+          if [ -f LICENSE ]; then
+            cp LICENSE dist/GIT_GUI-linux/
+          fi
+          if [ -f LICENSE.txt ]; then
+            cp LICENSE.txt dist/GIT_GUI-linux/
+          fi
+          tar -czf dist/GIT_GUI-linux.tar.gz -C dist GIT_GUI-linux
+      - name: Upload Linux artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GIT_GUI-linux
+          path: dist/GIT_GUI-linux.tar.gz

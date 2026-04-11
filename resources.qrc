@@ -1,0 +1,33 @@
+<RCC>
+  <qresource prefix="/icons">
+    <file>icons/app_icon.png</file>
+    <file>icons/create_new_folder.png</file>
+    <file>icons/folder_open.png</file>
+    <file>icons/close.png</file>
+    <file>icons/logout.png</file>
+    <file>icons/settings.png</file>
+    <file>icons/undo.png</file>
+    <file>icons/redo.png</file>
+    <file>icons/info.png</file>
+    <file>icons/add_circle.png</file>
+    <file>icons/task_alt.png</file>
+    <file>icons/difference.png</file>
+    <file>icons/history.png</file>
+    <file>icons/merge.png</file>
+    <file>icons/switch_access_shortcut.png</file>
+    <file>icons/save_as.png</file>
+    <file>icons/input.png</file>
+    <file>icons/cloud_queue.png</file>
+    <file>icons/download.png</file>
+    <file>icons/upload.png</file>
+    <file>icons/sync.png</file>
+    <file>icons/terminal.png</file>
+    <file>icons/folder.png</file>
+    <file>icons/report_problem.png</file>
+    <file>icons/open_in_new.png</file>
+    <file>icons/keyboard.png</file>
+    <file>icons/branch.png</file>
+    <file>icons/refresh.png</file>
+  </qresource>
+</RCC>
+
