@@ -77,45 +77,45 @@ In addition to the graphical interface, the application also includes a **hybrid
 ### Main Window
 
 ```markdown
-![Main Window](docs/screenshots/main_window.png)
+![Main Window](https://github.com/Rashidhamdan/Git-with-Qt-Cpp/docs/screenshots/main_window.png)
 ```
 
 ### Repository Explorer
 
 ```markdown
-![Repository Explorer](docs/screenshots/repo_explorer.png)
+![Repository Explorer](https://github.com/Rashidhamdan/Git-with-Qt-Cpp/docs/screenshots/repo_explorer.png)
 ```
 
 ### Status View
 
 ```markdown
-![Status View](docs/screenshots/status_view.png)
+![Status View](https://github.com/Rashidhamdan/Git-with-Qt-Cpp/docs/screenshots/status_view.png)
 ```
 
 ### Diff Viewer
 
 ```markdown
-![Diff Viewer](docs/screenshots/diff_viewer.png)
+![Diff Viewer](https://github.com/Rashidhamdan/Git-with-Qt-Cpp/docs/screenshots/diff_viewer.png)
 ```
 
 ### Log Viewer
 
 ```markdown
-![Log Viewer](docs/screenshots/log_viewer.png)
+![Log Viewer](https://github.com/Rashidhamdan/Git-with-Qt-Cpp/docs/screenshots/log_viewer.png)
 ```
 
 
 ### Branch Management
 
 ```markdown
-![Branch Management](docs/screenshots/branch_manager.png)
+![Branch Management](https://github.com/Rashidhamdan/Git-with-Qt-Cpp/docs/screenshots/branch_manager.png)
 ```
 
 
 ### Command Console
 
 ```markdown
-![Command Console](docs/screenshots/command_console.png)
+![Command Console](https://github.com/Rashidhamdan/Git-with-Qt-Cpp/docs/screenshots/command_console.png)
 ```
 
 ---
